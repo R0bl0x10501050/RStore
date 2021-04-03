@@ -37,7 +37,7 @@ game.Players.PlayerAdded:Connect(function(plr)
 end)
 ```
 
-`TIP: You can print the value of cash to see it increase.`
+`TIP: You can print the value of CashStore:Get(plr) to see it increase.`
 
 Great! Now you have a basic understanding of how to use RStore in your Roblox game!
 
