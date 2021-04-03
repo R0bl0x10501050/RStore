@@ -76,6 +76,13 @@ Great! Now you have a basic understanding of how to use RStore in your Roblox ga
 * Amount - Amount to increase the current value by
 #### Returns:
 * Cached result
+### RDataStore:OnUpdate(...)
+#### Description:
+* Executes callback when the RDataStore is updated
+#### Parameters:
+* Callback - A function to execute every time the RDataStore is updated; callback includes `newValue` as a function parameter
+#### Returns:
+* nil
 ### RDataStore:Save(...)
 #### Description:
 * Saves the specified obj's value to the Roblox Datastore API
@@ -88,5 +95,5 @@ Great! Now you have a basic understanding of how to use RStore in your Roblox ga
 * Calls :Save() on all objs in each RDataStore
 
 # Credit
-Creator & Maintainer - @R0bl0x10501050 ([DevForum](https://devforum.roblox.com/u/r0bl0x10501050/summary))
-Class.lua - Antonio6643 ([DevForum](https://devforum.roblox.com/u/antonio6643/summary))
+* Creator & Maintainer - @R0bl0x10501050 ([DevForum](https://devforum.roblox.com/u/r0bl0x10501050/summary))
+* Class.lua - Antonio6643 ([DevForum](https://devforum.roblox.com/u/antonio6643/summary))
