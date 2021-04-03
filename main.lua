@@ -98,12 +98,18 @@ function getKey(obj, dkey)
 	return key
 end
 
+local function update(self, obj)
+	if not self.Callbacks["OnUpdate"] then return end
+	self.Callbacks["OnUpdate"](self:Get(obj, 0))
+end
+
 --// RDataStore CLASS
 
 local RDataStore = Class{
 	__init__ = function(self, datakey)
 		self.DataKey = datakey
 		self.Objs = {}
+		self.Callbacks = {}
 	end,
 	
 	GetAsync = function(self, obj)
@@ -141,7 +147,7 @@ local RDataStore = Class{
 				self[key] = APIRes
 			end
 		else
-			print("in cache")
+			cprint("in cache")
 			res = self[key]
 		end
 		
@@ -173,6 +179,8 @@ local RDataStore = Class{
 		
 		self[key] = _cache
 		
+		update(self, obj)
+		
 		return _cache
 	end,
 	
@@ -180,6 +188,7 @@ local RDataStore = Class{
 		local currData = self:Get(obj)
 		if not typeof(currData) == "number" or not typeof(currData) == "float" then warn("You can only :Increment() an integer/float!") return end
 		self:Set(obj, currData + tonumber(amt))
+		return self:Get(obj)
 	end,
 	
 	Save = function(self, obj)
@@ -220,6 +229,10 @@ local RDataStore = Class{
 		for _, v in ipairs(objs) do
 			self:Save(v)
 		end
+	end,
+	
+	OnUpdate = function(self, callbackFunc)
+		self.Callbacks["OnUpdate"] = callbackFunc
 	end,
 }
 
