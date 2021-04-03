@@ -86,3 +86,7 @@ Great! Now you have a basic understanding of how to use RStore in your Roblox ga
 ### RDataStore:SaveAll()
 #### Description:
 * Calls :Save() on all objs in each RDataStore
+
+# Credit
+Creator & Maintainer - @R0bl0x10501050 ([DevForum](https://devforum.roblox.com/u/r0bl0x10501050/summary))
+Class.lua - Antonio6643 ([DevForum](https://devforum.roblox.com/u/antonio6643/summary))
