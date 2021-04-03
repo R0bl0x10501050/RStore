@@ -1,6 +1,6 @@
-`Roblox` refers to the [Roblox Servive](https://www.roblox.com/)
-`RStore` refers to this module on the Github repository
-`Acquirer` refers to the Person who is using **RStore** in their **Roblox** game
+`Roblox` refers to the [Roblox Servive](https://www.roblox.com/);
+`RStore` refers to this module on the Github repository;
+`Acquirer` refers to the Person who is using **RStore** in their **Roblox** game;
 
 **Acquirer** may:
 * Copy
